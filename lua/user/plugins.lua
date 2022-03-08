@@ -58,6 +58,20 @@ return packer.startup(function(use)
   use "goolord/alpha-nvim"
   use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
   use "folke/which-key.nvim"
+  use "folke/tokyonight.nvim"
+  use({
+    "max397574/better-escape.nvim",
+    config = function()
+      require("better_escape").setup()
+    end
+  })
+  use({
+    "mvllow/modes.nvim",
+    config = function()
+      vim.opt.cursorline = true
+      require('modes').setup()
+    end
+  })
 
   -- Colorschemes
   -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
